@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dash.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+
+<div class="center-aling">
+  <h1>Details of {{patient.name}}</h1> <br>
+  {% for item in patient.image.all %}
+  <img class="img-client" src="{% static 'images' %}/{{item.image}}" alt="img" width="900px"> <br>
+  {% endfor %}
+</div>
+
+
+</div>
+
+{% endblock content %}

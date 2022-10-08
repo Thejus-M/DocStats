@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dash.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+
+{% for item in doctor %}
+<div class="center-aling">
+  <h1>Welcome Dr. {{user}}</h1>
+</div>
+
+<div class="patient">
+{{item.name}} <br><br>
+<a href="/details/1">
+
+  <button>Details</button>
+</a>
+
+</div>
+{% endfor %}
+
+{% endblock content %}

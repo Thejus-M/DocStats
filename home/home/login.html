@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<div class="container">
+    <div class="form">
+        <form method="post">{% csrf_token %}
+        
+            {{ form.as_p }}
+            <button class="learn-more" value="submit">
+                
+                {% if request.path == 'home:signup' %}
+                    Register
+                {% else %}
+                LOGIN
+                {% endif %}
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

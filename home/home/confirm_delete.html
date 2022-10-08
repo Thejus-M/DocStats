@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<div class="container">
+    <div class="form">
+        <form method="post">{% csrf_token %}
+    
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+    
+    
+    
+            <button type="submit" class="button-one">Confirm Deleting</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

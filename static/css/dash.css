@@ -1,0 +1,18 @@
+
+.patient{
+  margin: 30px;
+  min-width: 300px;
+  padding: 30px;
+  background-color: red;
+  text-align: center;
+  border-radius: 30px;
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+
+}
+.img-client{
+  margin: 30px;
+
+
+}
